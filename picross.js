@@ -87,21 +87,17 @@ function loadData( puzzleElement )
 
 function displaySums( puzzleElement )
 {
+    puzzleElement.classList.add('content');
     let parent = puzzleElement.parentElement;
     let puzzleContainer = document.createElement('div');
     puzzleContainer.id = 'puzzleContainer';
     puzzleContainer.style.display = "grid";
-    puzzleContainer.style.width = "100%";
-    puzzleContainer.style.height = "490px";
     puzzleContainer.style.gridTemplateAreas = "'corner topSums' 'leftSums content' ";
     puzzleContainer.style.display = "grid";
 
     parent.removeChild( puzzleElement );
     puzzleContainer.appendChild( puzzleElement );
     parent.appendChild( puzzleContainer );
-
-
-
 }
 
 (function() {
